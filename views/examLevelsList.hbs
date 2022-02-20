@@ -1,0 +1,16 @@
+{{#if levels}}  
+
+{{#each levels}}
+	<div class="row" style="display: flex; justify-content: center;">
+		<div style= "margin: 20px" class="card light-green lighten-5">
+				<div class="card-content black-text">                      
+					<a href="./exam/{{this.level}}">Difficulty level: {{this.level}}</a> 
+					
+				</div>
+		</div>
+	</div>
+{{/each}}
+
+{{else}}
+    <p>There are no tickets yet!</p>
+{{/if}} 

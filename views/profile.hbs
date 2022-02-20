@@ -1,0 +1,118 @@
+<div class="row">
+    {{#if isCertificate}}
+	<div style="display: flex; justify-content: center;">
+		<h3>Поздравляем, вы успешно прошли курс!</h3>
+	</div>
+		<div class="container">
+			{{>certificate}}
+		</div>
+	{{else}}
+	<div>
+		<h4>You need to practice more for end up this course</h4>
+	</div>
+	{{/if}}
+	<div class="container">
+        <h3>Username: {{username}}</h3>
+    </div>
+
+	
+	
+
+
+
+    {{#if avgCompleteness}}
+    <div>
+		<div style="align-content: center;">
+			<h1 style="text-align:center">Average grades</h1>
+		</div>
+        <h4>Average rate: <b id="avgRate">{{percent}}</b></h4> 
+        <h5>Average completeness: <b id="avgCompleteness">{{avgCompleteness}}</b></h5> 
+        <h5>Average integrity: <b id= "avgIntegrity">{{avgIntegrity}}</b></h5>
+        <h5>Average skills: <b id= "avgSkills">{{avgSkills}}</b></h5>
+    </div>
+    <div class="container canvas-container" style="border:1px solid #ccc; width:550px; height:500px;padding:5px">
+    	<canvas id="mainChart" width="400" height="400"></canvas>
+    </div>
+
+     {{/if}}
+</div>
+
+
+<script>
+
+var popCanvas = document.getElementById("mainChart").getContext("2d");
+var completeness = document.getElementById("avgCompleteness").innerText
+var integrity = document.getElementById("avgIntegrity").innerText
+var skills = document.getElementById("avgSkills").innerText    
+var radar = new Chart(popCanvas, {
+  type: 'radar', 
+  data: {
+    labels: ["Completeness" , "Integrity"  , "Skills" ],
+    datasets: [{
+      label: 'Grades',
+      data: [completeness,integrity, skills],
+      backgroundColor: [
+        
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ]
+    }]
+  },
+  options: {
+    plugins: {
+		legend: {
+			labels: {
+				// This more specific font property overrides the global property
+				font: {
+					size: 24
+				}
+			}
+		}
+	},
+	scales: {
+		r: {
+			pointLabels: {
+				font: {
+					size: 20
+				}
+			}
+		}
+	},
+	scale:{
+		r :{
+			angleLines: {
+				display: false
+			},
+			beginAtZero: true,
+			min: 0,
+			max: 1
+		}
+	}
+  }
+});
+
+
+</script>
+<div style="display: flex; justify-content: center;">
+	<img src="arrow.png" alt="">
+</div>
+
+{{#if coursesDiagrams}}
+	<div class="canvas-container">
+		<div style="display: flex; flex-direction: row;">
+			{{#each coursesDiagrams}}
+				<div class="" style="display: flex; flex-direction: column;">
+					{{{this.avgDiagram}}}
+						{{#each this.levelsDiagrams}}
+							{{{this}}}
+						{{/each}}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+	{{else}}
+	<div>
+		<h4>No themes learned yet</h4>
+	</div>
+{{/if}}

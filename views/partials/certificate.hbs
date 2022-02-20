@@ -1,0 +1,102 @@
+
+<div class="outer sans">
+    <div class="inner">
+        <div class="secInner">
+            <div class="header cursive">Certificate of Completion</div>
+            <div style="font-size:25px"><i>This is to certify that</i></div>
+            <div class="underline"><b>{{username}}</b></div>
+            <div class="sans" ><i>has completed the course</i></div> 
+            <div class="theme underline">Programming languages</div> 
+
+            <div class="results">
+                <div class="grades">
+                    <div class="sans" >with score of </div> 
+                    <b class="percent sans">{{percent}}</b>
+                    <div class="dated"> {{dateTime}}</div>
+
+                </div>
+                <div class="seal">
+                    <img class = "image" src="gerb.png" alt="non">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script|Rochester');
+.cursive {
+  font-family: 'Pinyon Script', cursive;
+  font-size:25px;
+}
+.header{
+    margin: 30px 0 20px 0;
+    font-size:55px; 
+    font-weight:bold
+}
+.sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.outer{
+    width:800px; 
+    background: white;
+    height: 580px;
+    padding:4px; 
+    text-align:center;
+    border: 4px solid #618597
+}
+.inner{
+    background: white;
+    height: 100%;
+    width: 100%;
+    padding:4px;
+    text-align:center; 
+    border: 10px solid #618597
+}
+.secInner{
+    background: white;
+    height: 100%;
+    width: 100%;
+    padding:4px;
+    text-align:center; 
+    border: 4px solid #618597
+}
+.underline {
+    border-bottom: 1px solid #777;
+    padding: 5px;
+    margin: 15px 75px;
+    font-size:30px;
+    align-items: center;
+}
+.image{
+    width: 100px;
+    height: 100px;
+}
+
+.theme{
+    font-size: 36px;
+    font-weight: 700;
+}
+.percent{
+    font-size: 24px;
+}
+.results{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 40px;
+    justify-content: flex-end
+}
+.grades{
+    margin: 0 170px 0 0;
+}
+.dated{
+    margin-top: 15px;
+    font-size: 24px;
+}
+.seal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+</style>

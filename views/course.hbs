@@ -1,0 +1,41 @@
+<div class="course">
+    <h1>{{course.title}}</h1>
+    <div class="row">
+        <div class="col s3 offset-s1">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                <span class="card-title">Theory</span>
+                <p>Here you can learn something new about the chosen theme. All the knowledge for passing the test is here</p>
+                </div>
+                <div class="card-action">
+                <a href="{{course.id}}/theory">Read theory</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card green darken-2">
+                <div class="card-content white-text">
+                    <span class="card-title">Practice</span>
+                    <p>Here you can practice your knowledge of the material covered. No assessment is given for these tasks. This sentence means nothing, need to make card bigger </p>
+                </div>
+                <div class="card-action">
+                <a href="{{course.id}}/practice">Start practice</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="card teal darken-4">
+                <div class="card-content white-text">
+                <span class="card-title">Exam</span>
+                <p>The tasks of this section are solved for evaluation. Only one attempt is given. Study the theory well before starting this section. </p>
+                </div>
+                <div class="card-action">
+                <a href="{{course.id}}/exam">Start exam</a>
+                </div>
+            </div>
+        </div>
+  </div>
+  <a href="/courses/{{course.id}}/edit?allow=true" style="color: aliceblue; text-shadow: none">Edit course</a>
+  <div class="container"><p class="description">{{course.description}}</p></div>
+  
+</div>  

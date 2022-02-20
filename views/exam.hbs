@@ -1,0 +1,27 @@
+{{#if tickets}}  
+    <form method="POST">
+<div class="row">
+{{#each tickets}}
+        <div  class="col s12">
+            <div style= "margin: 20px" class="card light-green lighten-5">
+                    <div class="card-content black-text">
+                        <span class="card-title">{{question}}</span>                        
+                        {{#if guess1}}
+                            {{guesses this}}
+                        {{else}}
+                            <input type="text" name="{{id}}" value = "" type="text" class="validate" required>
+                        {{/if}}
+                    </div>
+            </div>
+        </div>
+</div>
+{{/each}}
+<div class="centerButton">
+    <button type = "submit" style="width: 50%; height: 100%" class="waves-effect waves-green btn">end test</button>
+</div>
+</form>
+
+
+{{else}}
+    <p>There are no tickets yet!</p>
+{{/if}} 

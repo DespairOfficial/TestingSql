@@ -1,0 +1,195 @@
+.nav-wrapper{
+    padding: 0 2rem;
+    background-color: rgb(26, 114, 60);
+}
+a{
+    color: rgb(255, 255, 132);
+    text-shadow: 1px 1px 2px black;
+}
+
+a :hover{
+    color: rgb(4, 14, 6);
+}
+.course{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.course h1{
+    margin-bottom: 2rem;
+}
+.course img{
+    max-width: 600px;
+    height: auto;
+}
+
+.course.description{
+    font-size: 2.5rem;
+}
+
+body{
+    background-color: rgb(235, 247, 225);
+}
+input[type="text"]{
+    color: black;
+    font-weight: 100;
+}
+.card-title{
+    font-size: 30px;
+}
+/* .card-action a{
+    color: black;
+    
+} */
+
+.btn{
+    margin-left: 10px;
+}
+.collection-item{
+    color: black
+}
+
+.isright  {
+    color: green;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.wrong {
+    color: red;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.answer{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+}
+.description{
+    font-size: 1.5rem;
+}
+.border{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    hyphens: auto;
+}
+
+.editMain input[type="text"]
+{
+    font-size: 1.5rem;
+}
+.editMain label{
+    font-size: 1.5rem;
+}
+.editBlock{
+    border: black;
+    border-width: 10px;
+    margin-bottom: 100px;
+}
+.explain{
+    font-size: 1.5rem;
+    color: black
+
+}
+.question{
+    font-size: 2.5rem;
+    color: black;
+    
+}
+
+
+.canvas-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .cv {
+    width: 100%;
+    height: 100%;
+  }
+.round{
+    background: white;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 100px;
+}
+.round p{
+    font-size: 2rem;
+}
+
+.map{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.cn {
+    display: table-cell;
+    width: 500px;
+    height: 500px;
+    vertical-align: middle;
+    text-align: center;
+  }
+.inner {
+    display: inline-block;
+}
+
+
+
+
+.link {
+    stroke: #aaa;
+  }
+  
+  .node text {
+    stroke:#333;
+    cursor:pointer;
+
+  }
+  
+  .node circle{
+    stroke:#fff;
+    stroke-width:10px;
+    fill:rgb(233, 233, 233);
+  }
+
+  #container {
+    width: 400px;
+    height: 400px;
+    margin: 10;
+    padding: 10;
+  }
+
+.centerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+}
+.centerButton button{
+    width: 50%;
+    height: 100%;
+    font-size: 24px;
+}
+
+li a{
+    font-size: 1.5rem;
+}
+
+.borderline{
+    border: #333;
+    border-width: 3px;
+    border-radius: 1px;
+}
+.level_ref{
+	color: rgb(255, 99, 132);
+}
+
+.changeMePls{
+	font-size: 2rem;
+}

@@ -1,0 +1,31 @@
+<div class="container">      
+    <div class="row">
+{{#each results.tickets}}
+        <div class="col s12">
+            <div class="card cyan lighten-5">
+                <div class="card-content black-text">
+                    <span class=" card-title answer question" style="font-weight: 700;"> Question: {{question}}</span>
+                        
+                        {{#if isRight}}
+                            <p class="isright">Right answer</p>
+                        {{else}}
+                            <p class="wrong">Wrong answer</p>
+                        {{/if}}
+                        {{#if isRight}}
+                        <p class="isright">Your answer: {{givenAnswer}}</p>
+                        {{else}}
+                        <p class="wrong">Your answer: {{givenAnswer}}</p>
+                        <div class="card-action">
+                            <p class="answer">Right answer: {{rightAnswer}}</p>
+                             <p class="explain">Explanation: {{explanation}}</p>
+                        </div>
+                        {{/if}}
+                        
+                </div>
+            </div>
+        </div>       
+  
+{{/each }}
+  </div>
+</div>
+
